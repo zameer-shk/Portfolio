@@ -612,77 +612,92 @@
         }
 
         /* --- Mobile Responsive Styles (Max-width 900px) --- */
-        @media (max-width: 900px) {
-            
-            /* Header */
-            header { 
-                padding: 15px 20px; 
-                grid-template-columns: 1fr auto; /* Removed middle column for nav */
-            }
-            .nav-links { display: none; } /* Hide the nav pill */
-            .header-right { 
-                gap: 10px; 
-                flex-wrap: wrap; /* Allow buttons to wrap/stack if space is tight */
-                justify-content: flex-end; /* Keep buttons to the right */
-            }
-            .contact-btn {
-                padding: 8px 15px; /* Smaller buttons on mobile */
-                font-size: 0.8rem;
-            }
-            .resume-link { display: none; } /* Hide resume link for simplicity */
+        /* --- Mobile Responsive Styles (Max-width 900px) --- */
+@media (max-width: 900px) {
+    /* Header */
+    header { 
+        padding: 15px 20px; 
+        grid-template-columns: 1fr auto; /* Removed middle column for nav */
+    }
+    .nav-links { display: none; } /* Hide the nav pill */
+    .header-right { 
+        gap: 10px; 
+        flex-wrap: wrap; /* Allow buttons to wrap/stack if space is tight */
+        justify-content: flex-end; /* Keep buttons to the right */
+    }
+    .contact-btn {
+        padding: 8px 15px; /* Smaller buttons on mobile */
+        font-size: 0.8rem;
+    }
+    .resume-link { display: none; } /* Hide resume link for simplicity */
 
-            /* Hero Section */
-            .hero {
-                padding-top: 120px; /* Adjusted padding for shorter mobile header */
-            }
-            .hero-title { 
-                font-size: 2rem; 
-                margin-bottom: 40px;
-                padding: 0 10px;
-            }
+    /* Hero Section */
+    .hero {
+        padding-top: 120px; /* Adjusted padding for shorter mobile header */
+    }
+    .hero-title { 
+        font-size: 2rem; 
+        margin-bottom: 40px;
+        padding: 0 10px;
+    }
 
-            /* Sections */
-            .projects-section { padding: 40px 20px; }
-            .section-title { font-size: 2rem; }
-            
-            /* Grids */
-            .projects-grid, .services-grid { grid-template-columns: 1fr; gap: 20px; }
-            
-            /* Project Cards */
-            .project-card { 
-                min-height: 400px;
-                padding: 30px 30px 0 30px; 
-            }
-            .project-title { font-size: 1.3rem; }
+    /* Sections */
+    .projects-section { padding: 40px 20px; }
+    .section-title { font-size: 2rem; }
+    
+    /* Grids */
+    .projects-grid, .services-grid { grid-template-columns: 1fr; gap: 20px; }
+    
+    /* Project Cards */
+    .project-card { 
+        min-height: 400px;
+        padding: 30px 30px 0 30px; 
+    }
+    .project-title { font-size: 1.3rem; }
 
-            /* About Section */
-            .about-content-card { 
-                grid-template-columns: 1fr; 
-                padding: 30px;
-                gap: 30px;
-                margin: 0 20px; /* Added horizontal margin to prevent edge-to-edge content */
-            }
-            .exp-item {
-                padding: 15px 0;
-                flex-wrap: wrap; /* Allow date and details to wrap if necessary */
-            }
-            .exp-date {
-                flex-basis: 100%; /* Force date to new line */
-                margin-top: 5px;
-                text-align: left;
-                margin-left: calc(48px + 20px); /* Align date with text content, past icon */
-            }
-            
-            /* Services Grid */
-            .services-grid {
-                margin: 30px auto;
-            }
+    /* About Section */
+    .about-content-card { 
+        grid-template-columns: 1fr; 
+        padding: 30px;
+        gap: 30px;
+        margin: 0 20px; /* Added horizontal margin to prevent edge-to-edge content */
+    }
+    .exp-item {
+        padding: 15px 0;
+        flex-wrap: wrap; /* Allow date and details to wrap if necessary */
+    }
+    .exp-date {
+        flex-basis: 100%; /* Force date to new line */
+        margin-top: 5px;
+        text-align: left;
+        margin-left: calc(48px + 20px); /* Align date with text content, past icon */
+    }
+    
+    /* Services Grid */
+    .services-grid {
+        margin: 30px auto;
+    }
 
-            /* Testimonials */
-            .testimonials { padding: 50px 20px; }
-            .testimonial-carousel-container { padding: 0; }
-            .carousel-btn { display: none; } /* Hide arrows on mobile */
-            .quote-text { font-size: 1.3rem; margin-bottom: 30px; }
+    /* Testimonials */
+    .testimonials { padding: 50px 20px; }
+    .testimonial-carousel-container { padding: 0; }
+    .carousel-btn { display: flex; } /* Make sure buttons are displayed */
+    .quote-text { font-size: 1.3rem; margin-bottom: 30px; }
+
+    /* Footer */
+    .cta-footer { padding: 60px 20px 30px; }
+    .footer-title { font-size: 2.2rem; }
+    .footer-buttons { flex-direction: column; align-items: center; gap: 15px; margin-bottom: 50px; }
+    .btn-primary, .btn-outline { width: 100%; max-width: 300px; }
+    .footer-bottom { 
+        flex-direction: column; 
+        text-align: center;
+        gap: 10px;
+    }
+    .social-icons { margin-top: 10px; }
+    .social-icons a { margin: 0 10px; }
+}
+
 
             /* Footer */
             .cta-footer { padding: 60px 20px 30px; }
@@ -879,7 +894,7 @@ development teams.</p>
             <button class="carousel-btn next-btn" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
 
             <div class="testimonial-slide active">
-                <p class="quote-text">"I wholeheartedly recommend Zameer as an exceptional Full Stack Developer with outstanding expertise across both front-end and back-end technologies. His ability to translate complex requirements into scalable, high-performing solutions made our collaboration seamless and highly impactful."</p>
+                <p class="quote-text">"I whole heartedly recommend Zameer as an exceptional Full Stack Developer with outstanding expertise across both front-end and back-end technologies. His ability to translate complex requirements into scalable, high-performing solutions made our collaboration seamless and highly impactful."</p>
                 <div class="client-info">
                     <img src="images/V1.jpg" alt="Vitthal Korvan" class="client-img">
                     <div>
